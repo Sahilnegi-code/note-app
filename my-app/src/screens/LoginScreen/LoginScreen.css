@@ -1,0 +1,110 @@
+section{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 62.5%;
+}
+.login_container{
+    width: 500px !important;
+    border: 2px solid green;
+    margin: auto;    
+}
+.login_center{
+   
+
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 93vh;
+    border: 2px solid red;
+    margin: 20px;    
+}
+
+.Sign-container{
+    /* min-width: 400px; */
+    /* border:2px solid orange; */
+    width: 400px;
+    max-height: 400px;
+   
+
+}
+.signIn-content{
+    /* height: 100%; */
+    /* heig */
+    /* min-width: 400px; */
+    /* scroll-behavior: auto; */
+    width: 100%;
+    /* border:2px solid green; */
+    
+}
+
+.h-1{
+    font-size: 3rem;
+}
+.h-2{
+    font-size: 2rem;
+}
+.h-3{
+    font-size: 1.5rem;
+}
+.h-4{
+    font-size: 1rem;
+}
+.a_Style{
+    font-weight: 600;
+    color:#892be25d;
+    cursor: pointer;
+    text-decoration: none !important;
+
+}
+.btn-style{
+width: 100%;
+padding : 0.2rem 0.6rem ;
+background-color: rgba(137, 43, 226, 0.366);
+color: white;
+border: none;
+
+}
+.btn-login{
+/* width: %; */
+padding : 0.6rem 1rem ;
+/* background-color: rgba(137, 43, 226, 0.366); */
+/* color: white; */
+border: none;
+font-size: 1rem;
+color:grey !important ;
+border-radius:5rem;
+
+}
+.input-style{
+width: 5rem;
+font-size: 1rem;
+padding: 0.5rem 0.5rem ;
+/* border: none; */
+border: 0.2rem solid #8080802c;
+outline: none;
+}
+.fa-icon{
+    width : 2rem;
+    margin: 0.3rem;
+}
+/* @media (max) {
+    
+} */
+
+@media (max-width: 600px) {
+    .login_container{
+        width: 300px !important;
+        scroll-behavior: auto;
+        /* margin: auto; */
+        border: 2px solid yellow;
+    }
+  }
+  @media (max-width: 400px) {
+    .login_container{
+        width: 200px !important;
+        scroll-behavior: auto;
+        border: 2px solid orange;
+    }
+  }
+

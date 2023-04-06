@@ -1,0 +1,9 @@
+.card_container{
+    
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    min-height: 93vh;
+    border: 2px solid red;
+    margin: 20px;  
+}

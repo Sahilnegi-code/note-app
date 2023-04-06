@@ -1,0 +1,32 @@
+img{
+    width: 100px;
+}
+@media (max-width: 928px) {
+    .content{
+        display: inline-block;
+        width: 50%;
+    }
+    .user_img{
+        /* border: 2px solid red; */
+        /* display: inline-block; */
+        text-align: right;
+       
+    }
+    .user_img img{
+        border: 2px solid red;
+        display: inline-block;
+        width: 100px;
+        text-align: right;
+    }
+
+  }
+
+  @media (max-width: 400px) {
+    
+    
+    .user_img img{
+        display: none;
+    }
+
+  }
+

@@ -1,0 +1,33 @@
+div.main{
+    min-height:93vh;
+    background-image: url('background.jpg') ;
+    border:2px solid red;
+
+    background-size:cover; 
+     background-position:center;
+    
+  
+}
+.btnContainer button{
+    width: 300px;
+    
+}
+@media only screen and (min-width:1200px){
+    .text-intro{
+        padding : 0 200px;
+    }
+}
+
+@media only screen and (max-width: 800px){
+    .btnContainer button{
+        width: 100px;
+        
+    }
+    .text-intro h1{
+        font-size:50px ;
+        font-weight: 500;
+    }
+    .container{
+        width:100%;
+    }
+}
