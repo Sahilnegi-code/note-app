@@ -6,7 +6,7 @@ section{
 }
 .login_container{
     width: 500px !important;
-    border: 2px solid green;
+    /* border: 2px solid green; */
     margin: auto;    
 }
 .login_center{

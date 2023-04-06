@@ -1,4 +1,4 @@
-let jwt = require("jsonwebtoken");
+let jwt = require('jsonwebtoken');
 const User = require("../modals/userModal");
 const protect = async(req,res,next)=>{
     let token;
