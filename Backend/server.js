@@ -15,7 +15,7 @@ app.use('/api/users',userRoutes);
 app.use('/api/notes',noteRoutes);
 // deployment 
 __dirname = path.resolve();
-console.log(process.env.NODE_ENV)
+// console.log(process.env.NODE_ENV)
 console.log(path.resolve(__dirname , "../my-app", "build" , "index.html"));
 if( process.env.NODE_ENV === 'production'){
     console.log("tr")
