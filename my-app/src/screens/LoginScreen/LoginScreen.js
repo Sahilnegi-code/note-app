@@ -1,6 +1,5 @@
 import React from 'react'
 import axios from 'axios';
-import MyNotes from '../MyNotes/MyNotes'
 import { useState , useEffect } from 'react';
 import { useNavigate } from "react-router-dom";
 import Loading from '../../component/Loading';
@@ -38,7 +37,7 @@ import  './LoginScreen.css'
             localStorage.setItem('userInfo',JSON.stringify(data));
             setLoading(false);
             if(Object.keys(userInfo).length !== 0 ){
-              navigate("/mynotes");
+              navigate("/mynotes" ,  { replace: true });
             }
         }
     catch(err){
@@ -61,12 +60,10 @@ import  './LoginScreen.css'
   return (
     <>
    <div className='login_center'>
-   <div className='login_container'>
-
-
-
-
 <div>
+
+<div className='login_container'>
+<div  >
 <h1 className='heading'>Login</h1>
 </div>
 
@@ -78,7 +75,7 @@ import  './LoginScreen.css'
  loading &&  <Loading/>
 }
 
-<div>
+<div >
 <form onSubmit={submitHandler}>
 <div class="form-group">
 <label for="exampleInputEmail1">Email address</label>
@@ -105,6 +102,10 @@ id="exampleInputPassword1"/>
 >Submit</button>
 </form>
 </div>
+
+</div>
+
+
 </div>
 
     </div>

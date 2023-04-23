@@ -31,7 +31,7 @@ const SingleNote = () => {
          }
        };
  
-       const { data } = await axios.put(`http://localhost:5000/api/notes/${id}`,{title, content, category
+        await axios.put(`http://localhost:5000/api/notes/${id}`,{title, content, category
      },config);
 
      navigate("/mynotes");
@@ -53,12 +53,9 @@ useEffect(() => {
       setCategory(data.category);
 
     }
-  
-    let userInfo = localStorage.getItem("userInfo"); 
-        userInfo = JSON.parse(userInfo);
     fetchNotes();
   
-
+// eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
   return (
     
@@ -94,10 +91,10 @@ useEffect(() => {
   class="form-control" id="exampleFormControlInput1" placeholder="Type the category"/>
 </div>
 
-<a href="">
+<a href="!#">
               <button className='btn btn-outline-success  m-3' type='submit' >Submit</button>
               </a>
-              <a href="">
+              <a href="!#">
               <button className='btn btn-outline-danger  m-3 ' >Clear</button>    
           </a>
 

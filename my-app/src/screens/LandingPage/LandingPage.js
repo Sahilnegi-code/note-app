@@ -9,7 +9,7 @@ const LandingPage = () => {
         <>
             <div className="main">
                 <div className="container text-center" >
-                <div  style ={{display : 'flex' ,  height:'90vh', justifyContent:'center', flexDirection:'column' , border: '2px solid red'}} >
+                <div  style ={{display : 'flex' ,  height:'100vh', justifyContent:'center', flexDirection:'column' }} >
                 
                 <div  style ={{display : 'flex' , alignItems:'center', flexDirection:'column'}}>
                 <div className="text-intro">

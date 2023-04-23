@@ -3,20 +3,16 @@
 const User = require("../modals/userModal");
 const generateToken = require("../util/generateToken");
 
-const registerUser = async (req  ,res) =>{
+const registerUser = async (req  ,res) => {
+
     const {name , email , password , pic } = req.body;
 
-    console.log(req.body );
-    console.log(name , email )
-    // console.log("hello"/ )
-    // res.json({name , email});
+
     try{
         const userExists = await User.findOne({email});
         if(userExists){
             res.status(400);
-        
         }
-        
     }
     catch(err){
      
@@ -38,7 +34,6 @@ const registerUser = async (req  ,res) =>{
                 pic : user.pic,
                 token : generateToken(user._id)
             });
-console.log(generateToken(user._id));
         }
         else{
             res.status(400);
@@ -65,7 +60,6 @@ const authUser = async (req  ,res) =>{
                 pic : user.pic,
                 token : generateToken(user._id)
             });
-            console.log( "Sahil Nevgi");
         }
         else{
             res.status(400 );

@@ -7,17 +7,29 @@ import RegisterScreen from './screens/RegisterScreen/RegisterScreen';
 import  LoginScreen  from './screens/LoginScreen/LoginScreen';
 import CreateNote from './screens/CreateNote/CreateNote';
 import SingleNote from './screens/SingleNote/SingleNote';
-
+// import {useLocation} from 'react-router-dom';
+// import { useLocation } from 'react-router-dom';
 function App() {
    
   const [search,setSearch] = useState("");
- 
+//  const id= useLocation();
+//  console.log(id);
+const pathname = window.location.pathname;
+ console.log(window.location.pathname);
+//  const handler = () =>{;
+//    return <Header setSearch ={setSearch} /> 
+//  }
+console.log(pathname);
   return (
     <>
     <div >
     <BrowserRouter > 
-    <Header setSearch ={setSearch} />
+  
+
     
+     { window.location.pathname  === '/login' || window.location.pathname === '/'  ? "": <Header setSearch ={setSearch} />   }
+    
+
     <main  style={{  position: 'relative',
   minHeight: '89vh'
 }} >

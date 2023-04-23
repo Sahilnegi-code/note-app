@@ -1,6 +1,10 @@
 img{
     width: 100px;
 }
+.header{
+    margin-top: 0.4rem;
+    border-top: 2px solid rgb(192, 191, 191);
+}
 @media (max-width: 928px) {
     .content{
         display: inline-block;

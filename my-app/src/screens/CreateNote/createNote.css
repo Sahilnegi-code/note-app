@@ -1,0 +1,20 @@
+.card-title{
+    padding: 10px;
+    /* background-image: url('background.jpg') ; */
+    /* border: 2px solid red; */
+    border-bottom: 2px solid grey;
+    text-align: center;
+ 
+}
+.picContainer{
+    background-image: url('background.jpg') ;
+    background-size:cover; 
+     background-position:center;
+    
+}
+@media only screen and (max-width: 400px) {
+    .card {
+      min-width: 300px;
+      padding: 5px;
+    }
+  }

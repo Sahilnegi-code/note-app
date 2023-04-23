@@ -10,18 +10,18 @@ const protect = async(req,res,next)=>{
     ){
         try{
             token = req.headers.authorization.split(" ")[1];
-            const decoded = jwt.verify(token , process.env.JWT_SECRET);
+            const decoded =  jwt.verify(token , process.env.JWT_SECRET);
             req.user =  await User.findById(decoded.id).select("-password");
             next();
         }
         catch(err){
             res.status(401);
-            throw new Error("Not authorized ,  token Failed");
+            // throw new Error("Not authorized ,  token Failed");
         }
     }
     if(!token ){
         res.status(401);
-        throw new Error("Not authorized , no token");
+        // throw new Error("Not authorized , no token");
     }
 } 
 module.exports = {protect};

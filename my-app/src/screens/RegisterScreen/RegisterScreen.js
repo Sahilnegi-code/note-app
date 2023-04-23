@@ -14,7 +14,6 @@ const RegisterScreen = () => {
   const [confirmpassword, setconfirmPassword] = useState("")
   const [message , setMessage] = useState("")
   const [picMessage , setPicMessage] = useState("")
-  const [error , setError] = useState("")
   const [loading , setLoading] = useState(false)
   const navigate = useNavigate();
  
@@ -42,7 +41,7 @@ try{
   
   setLoading(true);
   const { data } = await axios.post('http://localhost:5000/api/users',{
-    name, email , pic , email , password 
+    name, email , pic  , password 
   },config);
 
   setLoading(false);
@@ -52,7 +51,7 @@ try{
 catch(err){
   setLoading(false);
   setMessage("User Exist Already ");
-  setError(err);
+
 
   }
 
@@ -108,7 +107,7 @@ catch(err){
 
   return (
     <>
-    <div className='container'>
+    <div className='container' style={ {    marginTop: '2rem' , boxShadow: '0px 0px 2px #5C5696'  }} > 
 
     {
       

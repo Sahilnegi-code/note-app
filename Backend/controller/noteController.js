@@ -1,4 +1,6 @@
 const Note = require("../modals/noteModels");
+
+
 const getNotes = async(req,res)=>{
     try{
 
@@ -6,7 +8,7 @@ const getNotes = async(req,res)=>{
         res.json(notes)
     }
     catch(err){
-       
+       res.json(err);
     }
 }
 const   createNote = async(req,res)=>{
@@ -15,7 +17,7 @@ const   createNote = async(req,res)=>{
     
     if( !title || !content || !category  ) {
         res.status(400);
-        throw new Error("Pls fill all the Field.");
+    
         return;
     }
     
@@ -28,7 +30,7 @@ const   createNote = async(req,res)=>{
         res.status(201).json(createNote);
     }
     catch(err){
-       
+       res.json(err);
     }
     
     
@@ -48,7 +50,7 @@ const getNoteById = async(req,res)=>{
         }
     }
     catch(err){
-  
+  res.json(err);
     }
 }
 const updatNote =  async(req , res )=>{
@@ -72,13 +74,13 @@ try{
                 res.json(updateNote);
             }
             catch(err){
-               
+               res.json(err);
             }
             
         }
         else{
             res.status(404);
-            throw new Error("note not found");
+            // throw new Error("note not found");
         }
     }
 }

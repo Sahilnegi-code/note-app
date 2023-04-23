@@ -1,7 +1,7 @@
 div.main{
     min-height:93vh;
     background-image: url('background.jpg') ;
-    border:2px solid red;
+    /* border:2px solid red; */
 
     background-size:cover; 
      background-position:center;

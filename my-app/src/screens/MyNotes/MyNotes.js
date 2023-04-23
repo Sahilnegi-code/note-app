@@ -1,16 +1,17 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React ,{useEffect,useState} from 'react'
 import {Link} from "react-router-dom";
 import  './MyNotes.css'
 import MainScreen from '../../component/MainScreen/MainScreen'
 import axios from 'axios';
-
+import Header from '../../component/Header/Header';
 
 const MyNotes = ({search}) => {
   const [notes, setnotes] = useState([])
 
 
   const deleteHandler = async(notesId)=>{
-const isDel = window.confirm("Do you want to delete this ?")  ;
+// const isDel = window.confirm("Do you want to delete this ?")  ;
 
       let userInfo = localStorage.getItem("userInfo"); 
       userInfo = JSON.parse(userInfo);
@@ -24,7 +25,7 @@ const isDel = window.confirm("Do you want to delete this ?")  ;
 
 
       try{
-        const {data }= await axios.delete(`http://localhost:5000/api/notes/${notesId} `, config);
+        await axios.delete(`http://localhost:5000/api/notes/${notesId} `, config);
         fetchNotes(config,userInfo._id);
     }catch(err){
 
@@ -61,6 +62,7 @@ useEffect(() => {
 
   return (
     <>
+    {/* <Header />  */}
     <div className='mainback'>
     <div className='container'>
     <MainScreen title ="hello"/>
