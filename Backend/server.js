@@ -17,17 +17,17 @@ app.use('/api/notes',noteRoutes);
 __dirname = path.resolve();
 // console.log(process.env.NODE_ENV)
 console.log(path.resolve(__dirname , "../my-app", "build" , "index.html"));
-// if( process.env.NODE_ENV === 'production'){
-//     console.log("tr")
-//     app.use(express.static(path.join(__dirname, '../my-app/build')))
-//     app.get('*', (req , res)=>{
-//         console.log("hello")
-//         res.sendFile(path.resolve(__dirname , "../my-app", "build" , "index.html"));
-//     })
-// }
-// else{
-//     console.log("not working")
-// }
+if( process.env.NODE_ENV === 'production'){
+    console.log("tr")
+    app.use(express.static(path.join(__dirname, '../my-app/build')))
+    app.get('*', (req , res)=>{
+        console.log("hello")
+        res.sendFile(path.resolve(__dirname , "../my-app", "build" , "index.html"));
+    })
+}
+else{
+    console.log("not working")
+}
 
 // deployment
 
