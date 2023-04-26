@@ -27,7 +27,7 @@ const resetHandler = ()=>{
         }
       };
 
-    await axios.post('http://localhost:5000/api/notes/create',{title, content, category
+    await axios.post('/api/notes/create',{title, content, category
     },config);
     navigate("/mynotes");
 

@@ -46,7 +46,7 @@ const SingleNote = () => {
   
 useEffect(() => {
     const fetchNotes = async ()=>{
-      const {data} = await  axios.get(`http://localhost:5000/api/notes/${id}`);
+      const {data} = await  axios.get(`/api/notes/${id}`);
       console.log(data, "check")
       setTitle(data.title);
       setContent(data.content);

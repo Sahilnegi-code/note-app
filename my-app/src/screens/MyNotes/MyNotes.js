@@ -34,7 +34,7 @@ const MyNotes = ({search}) => {
 
 }
 const fetchNotes = async (config,id)=>{
-  const {data} = await  axios.get(`http://localhost:5000/api/notes`, config ,id);
+  const {data} = await  axios.get(`/api/notes`, config ,id);
   
   setnotes(data);
 }

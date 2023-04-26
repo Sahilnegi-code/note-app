@@ -30,9 +30,7 @@ console.log(pathname);
      { window.location.pathname  === '/login' || window.location.pathname === '/'  ? "": <Header setSearch ={setSearch} />   }
     
 
-    <main  style={{  position: 'relative',
-  minHeight: '89vh'
-}} >
+    <main  style={{  position: 'relative',  minHeight: '89vh'}}  >
     
     <Routes>
     <Route path = "/"  element = {  < LandingPage />   }  />
