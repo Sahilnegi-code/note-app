@@ -25,7 +25,7 @@ const MyNotes = ({search}) => {
 
 
       try{
-        await axios.delete(`http://localhost:5000/api/notes/${notesId} `, config);
+        await axios.delete(`/api/notes/${notesId} `, config);
         fetchNotes(config,userInfo._id);
     }catch(err){
 

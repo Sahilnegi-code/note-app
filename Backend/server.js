@@ -34,10 +34,7 @@ else{
 
 const PORT = process.env.PORT ;
 app.get('/api/notes/:id',(req,res)=>{
-    const note = data.find((n)=>{
-     return   n._id === req.params.id;
-    }) 
-    
+    const note = data.find((n)=>{ return   n._id === req.params.id; }); 
     res.send(PORT);
 });
 app.listen( PORT , console.log(`server started on port  `));

@@ -31,7 +31,7 @@ const SingleNote = () => {
          }
        };
  
-        await axios.put(`http://localhost:5000/api/notes/${id}`,{title, content, category
+        await axios.put(`/api/notes/${id}`,{title, content, category
      },config);
 
      navigate("/mynotes");
