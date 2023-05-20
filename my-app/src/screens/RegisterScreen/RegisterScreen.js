@@ -40,7 +40,7 @@ try{
   }
   
   setLoading(true);
-  const { data } = await axios.post('/api/users',{
+  const { data } = await axios.post('api/users',{
     name, email , pic  , password 
   },config);
 
