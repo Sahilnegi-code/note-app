@@ -11,7 +11,9 @@ const registerUser = async (req  ,res) => {
     try{
         const userExists = await User.findOne({email});
         if(userExists){
-            res.status(400);
+            res.status(400).json({
+                exist : 'true'
+            });
         }
     }
     catch(err){
