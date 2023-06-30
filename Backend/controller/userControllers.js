@@ -25,6 +25,7 @@ const registerUser = async (req  ,res) => {
             password,
             pic
         });
+        await user.save();
         if(user){
             res.status(201).json({
                 _id:user._id,
